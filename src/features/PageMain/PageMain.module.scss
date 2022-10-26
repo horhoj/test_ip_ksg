@@ -1,0 +1,38 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bigTitle {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.smallTitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.textBlock {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+
+  &>a {
+    color: #002BC5;
+  }
+
+
+}

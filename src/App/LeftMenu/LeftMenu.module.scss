@@ -1,0 +1,26 @@
+.wrap {
+  max-width: 300px;
+  min-width: 300px;
+  overflow: auto;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.menuTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.LinkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  &>li {
+    width: 100%;
+  }
+}

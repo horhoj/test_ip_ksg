@@ -1,0 +1,27 @@
+.wrap {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.pageTitle {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.searchHint {
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.AddressSearchInputWrap {
+  margin-top: 24px;
+}
+
+.AddressListWrap {
+  margin-top: 32px;
+}
