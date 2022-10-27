@@ -27,12 +27,16 @@ export const AddressList: FC = () => {
   return (
     <div className={styles.wrap}>
       <h3 className={styles.title}>Адреса</h3>
-      <ul className={styles.addressList}>
-        {addressList &&
-          addressList.map((addressItem) => (
+      {addressList && (
+        <ul className={styles.addressList}>
+          {addressList.map((addressItem) => (
             <li key={getUUID()}>{addressItem} </li>
           ))}
-      </ul>
+        </ul>
+      )}
+      {addressList?.length === 0 && (
+        <div className={styles.emptyAddressList}>Ничего не найдено</div>
+      )}
     </div>
   );
 };

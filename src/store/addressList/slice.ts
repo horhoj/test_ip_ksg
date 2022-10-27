@@ -19,7 +19,12 @@ const initialState: InitialState = {
 export const { actions, reducer } = createSlice({
   name: SLICE_NAME,
   initialState,
-  reducers: {},
+  reducers: {
+    clear: (state) => {
+      state.fetchAddressListRequest.data = null;
+      state.fetchAddressListRequest.error = null;
+    },
+  },
   extraReducers: (builder) => {
     makeRequestCaseToBuilder<InitialState>(
       builder,

@@ -1,10 +1,17 @@
+@import '../../const.scss';
+
 .wrap {
   min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #4F27BF;
+  background-color: var(--primary-color);
   padding: 0 32px;
+  gap: 20px;
+
+  @media (max-width: $MOBILE_WIDTH) {
+    padding: 0 10px;
+  }
 
 }
 
@@ -21,10 +28,14 @@
 }
 
 .logoText {
-  color: #fff;
+  color: var(--white);
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+
+  @media (max-width: $MOBILE_WIDTH) {
+    display: none;
+  }
 }
 
 .avatarWrap {
@@ -40,8 +51,31 @@
 }
 
 .avatarText {
-  color: #fff;
+  color: var(--white);
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+
+  @media (max-width: $MOBILE_WIDTH) {
+    display: none;
+  }
+}
+
+.burgerMenu {
+  background-color: rgba(var(--white), 0);
+  border: none;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  &>div {
+    background-color: var(--white);
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+  }
+
 }

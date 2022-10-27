@@ -8,11 +8,11 @@
 
 .wrapNavLinkActive {
   &>:local.svgWrap>svg {
-    fill: #4F27BF !important;
+    fill: var(--primary-color) !important;
   }
 
   &>:local.text {
-    color: #4F27BF !important;
+    color: var(--primary-color) !important;
     ;
   }
 }
@@ -23,7 +23,7 @@
   gap: 20px;
   text-decoration: none;
   width: 100%;
-  background-color: rgba(#fff, 0);
+  background-color: rgba(var(--white), 0);
   border: none;
   cursor: pointer;
 }
@@ -32,7 +32,7 @@
 
 .svgWrap {
   &>svg {
-    fill: #1C1C1E;
+    fill: var(--secondary-color);
     width: 32px;
     height: 32px;
   }
@@ -55,6 +55,7 @@
   flex-direction: column;
   gap: 20px;
   padding-left: 48px;
+  list-style: none;
 }
 
 

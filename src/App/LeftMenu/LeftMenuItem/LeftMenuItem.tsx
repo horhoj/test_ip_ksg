@@ -3,14 +3,9 @@ import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import * as iconList from '../../../assets/iconList';
 import styles from './LeftMenuItem.module.scss';
+import { LeftMenuItemData } from './LeftMenuItem.types';
 
-interface LeftMenuItemProps {
-  text: string;
-  icon: JSX.Element;
-  link?: string | null;
-  onClick?: (() => void) | null;
-  isParentOpen?: boolean | null;
-}
+export interface LeftMenuItemProps extends LeftMenuItemData {}
 
 export const LeftMenuItem: FC<LeftMenuItemProps> = ({
   icon,
@@ -62,7 +57,7 @@ export const LeftMenuItem: FC<LeftMenuItemProps> = ({
         </button>
       )}
       {isParentOpen && children && (
-        <div className={styles.childrenWrap}>{children}</div>
+        <ul className={styles.childrenWrap}>{children}</ul>
       )}
     </>
   );

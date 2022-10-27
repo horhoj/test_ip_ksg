@@ -1,8 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AppState } from './types';
+import { AppRedirectUrl } from './types';
 
-const initialState: AppState = {
+interface InitialState {
+  redirectUrl: AppRedirectUrl | null;
+  isShowLeftMenu: boolean;
+  isShowBurgerMenu: boolean;
+  isMobile: boolean;
+}
+
+const initialState: InitialState = {
   redirectUrl: null,
+  isShowLeftMenu: true,
+  isShowBurgerMenu: false,
+  isMobile: true,
 };
 
 export const { actions, reducer } = createSlice({
@@ -18,6 +28,18 @@ export const { actions, reducer } = createSlice({
       state.redirectUrl = {
         path: action.payload,
       };
+    },
+    setIsShowLeftMenu: (state, action: PayloadAction<boolean>) => {
+      state.isShowLeftMenu = action.payload;
+    },
+    setIsShowBurgerMenu: (state, action: PayloadAction<boolean>) => {
+      state.isShowBurgerMenu = action.payload;
+    },
+    toggleShowLeftMenu: (state) => {
+      state.isShowLeftMenu = !state.isShowLeftMenu;
+    },
+    setIsMobile: (state, action: PayloadAction<boolean>) => {
+      state.isMobile = action.payload;
     },
   },
 });

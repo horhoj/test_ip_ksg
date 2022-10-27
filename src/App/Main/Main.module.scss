@@ -1,6 +1,12 @@
+@import '../../const.scss';
+
 .wrap {
   overflow: auto;
   padding: 24px 32px;
   display: flex;
   flex-grow: 1;
+
+  @media (max-width: $MOBILE_WIDTH) {
+    padding: 12px 10px;
+  }
 }

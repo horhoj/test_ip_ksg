@@ -1,3 +1,5 @@
+@import '../../const.scss';
+
 .wrap {
   max-width: 300px;
   min-width: 300px;
@@ -6,7 +8,20 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  background-color: var(--white);
+  overflow: auto;
+
+  box-shadow: 0px 0px 5px rgba(2, 0, 96, 0.25);
+
+  @media (max-width: $MOBILE_WIDTH) {
+    position: fixed;
+    max-height: calc(90vh - 80px);
+    left: 0px;
+    top: 80px;
+  }
 }
+
+
 
 .menuTitle {
   font-weight: 700;
